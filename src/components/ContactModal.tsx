@@ -1,4 +1,4 @@
-import { X, Mail, Phone } from 'lucide-react';
+import { X, Mail, Phone, MessageCircle } from 'lucide-react';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -17,6 +17,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         console.log('Phone number copied to clipboard');
       });
     }
+  };
+
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '918551962684'; // Remove + and spaces for WhatsApp URL
+    const message = encodeURIComponent('Hello! I would like to discuss my project requirements with Celeris Autocomp.');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   if (!isOpen) return null;
@@ -80,11 +87,30 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
           </button>
 
+          {/* WhatsApp Contact */}
+          <button
+            onClick={handleWhatsAppClick}
+            className="w-full flex items-center gap-4 p-6 bg-gradient-to-r from-green-50 to-green-100 rounded-lg hover:from-green-100 hover:to-green-200 transition-all duration-300 hover:shadow-md group"
+            aria-label="Contact us on WhatsApp"
+          >
+            <div className="flex-shrink-0 p-3 bg-white rounded-full shadow-sm group-hover:shadow-md transition-shadow">
+              <MessageCircle size={24} className="text-green-600" />
+            </div>
+            <div className="flex-1 text-left">
+              <p className="text-lg font-semibold text-gray-900 mb-1">
+                Chat with us on WhatsApp
+              </p>
+              <p className="text-green-600 font-medium hover:text-green-700 transition-colors">
+                +91 8551962684
+              </p>
+            </div>
+          </button>
+
           {/* Additional Information */}
           <div className="mt-8 pt-6 border-t border-gray-200">
             <div className="text-center space-y-2">
               <p className="text-sm text-gray-600">
-                <strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM IST
+                <strong>Business Hours:</strong> Monday - Saturday, 9:00 AM - 6:00 PM IST
               </p>
               <p className="text-sm text-gray-600">
                 We respond within 24 hours

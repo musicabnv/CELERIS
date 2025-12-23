@@ -1,4 +1,5 @@
 import { Factory, Wrench, Grid3x3, Bot, Cpu, Lightbulb, Award, Users, Zap, Car, Truck, Bike, Tractor } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import RevealOnScroll from './RevealOnScroll';
 
 interface CapabilitiesPageProps {
@@ -48,8 +49,19 @@ const strengths = [
 export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) {
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <h1 className="text-5xl font-bold mb-6 text-gray-900">Our Capabilities</h1>
+      {/* Back Arrow */}
+      <div className="fixed top-24 left-4 z-50">
+        <button
+          onClick={() => onNavigate('home')}
+          className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:bg-accent-blue-50 border border-gray-200"
+          aria-label="Back to home"
+        >
+          <ArrowLeft size={24} className="text-accent-blue-700" />
+        </button>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-left">
+        <h1 className="text-3xl md:text-5xl font-bold mb-6 text-accent-blue-700">Our Capabilities</h1>
         <p className="text-xl text-gray-700 max-w-3xl mx-auto">
           Delivering advanced engineering and manufacturing excellence across the entire product lifecycle.
         </p>
@@ -57,8 +69,8 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
 
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Capabilities at a Glance</h2>
+          <div className="text-left mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-accent-blue-700 mb-8">Capabilities at a Glance</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {capabilitiesGlance.map((capability, index) => {
@@ -67,9 +79,9 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                 <RevealOnScroll key={index} delay={index * 50}>
                   <div className="text-center p-4">
                     <div className="inline-flex p-4 rounded-full border-2 border-gray-50 mb-4">
-                      <Icon size={48} className="text-gray-700" />
+                      <Icon size={48} className="text-accent-blue-700" />
                     </div>
-                    <h3 className="text-base font-semibold text-gray-900">
+                    <h3 className="text-base font-semibold text-accent-blue-700">
                       {capability.title}
                     </h3>
                   </div>
@@ -91,7 +103,7 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                 />
               </div>
               <div className="flex-1 p-8 lg:p-12">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-accent-blue-700 mb-4">
                   Precision Component Manufacturing
                 </h3>
                 <p className="text-lg text-gray-700 mb-6">
@@ -100,16 +112,16 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Focus:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Focus:</h4>
                     <p className="text-gray-700">Automotive components across multiple vehicle categories</p>
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Examples:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Examples:</h4>
                     <ul className="space-y-1">
                       {['BIW Parts', 'Engine brackets', 'Suspension parts', 'Transmission components', 'Chassis components', 'Precision machined parts', 'Electric Vehicle Components'].map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-gray-900 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-accent-blue-700 rounded-full"></div>
                           {item}
                         </li>
                       ))}
@@ -117,12 +129,12 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Materials Expertise:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Materials Expertise:</h4>
                     <p className="text-gray-700">Sheet metal, machined metals, plastics & polymer components</p>
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Production Capabilities:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Production Capabilities:</h4>
                     <p className="text-gray-700">Prototyping, low volume → Full-scale mass production</p>
                   </div>
                 </div>
@@ -139,7 +151,7 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                 />
               </div>
               <div className="flex-1 p-8 lg:p-12">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-accent-blue-700 mb-4">
                   Advanced Tooling & Die Solutions
                 </h3>
                 <p className="text-lg text-gray-700 mb-6">
@@ -148,16 +160,16 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Specialization:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Specialization:</h4>
                     <p className="text-gray-700">Design & manufacturing of high-precision tools and dies</p>
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Examples:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Examples:</h4>
                     <ul className="space-y-1">
                       {['Progressive dies', 'Stamping dies', 'Injection molds', 'Casting dies', 'Trim dies'].map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-gray-900 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-accent-blue-700 rounded-full"></div>
                           {item}
                         </li>
                       ))}
@@ -165,11 +177,11 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Engineered for:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Engineered for:</h4>
                     <ul className="space-y-1">
                       {['Longevity', 'Accuracy', 'High productivity', 'Quality Enhancement Engineering'].map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-gray-900 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-accent-blue-700 rounded-full"></div>
                           {item}
                         </li>
                       ))}
@@ -189,7 +201,7 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                 />
               </div>
               <div className="flex-1 p-8 lg:p-12">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-accent-blue-700 mb-4">
                   Custom Fixtures & Workholding
                 </h3>
                 <p className="text-lg text-gray-700 mb-6">
@@ -198,11 +210,11 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Types:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Types:</h4>
                     <ul className="space-y-1">
                       {['Process fixtures', 'Assembly fixtures', 'Inspection fixtures', 'Welding fixtures'].map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-gray-900 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-accent-blue-700 rounded-full"></div>
                           {item}
                         </li>
                       ))}
@@ -210,11 +222,11 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Purpose:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Purpose:</h4>
                     <ul className="space-y-1">
                       {['Streamline production', 'Ensure assembly accuracy', 'Validate dimensional quality', 'Support joining & welding processes'].map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-gray-900 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-accent-blue-700 rounded-full"></div>
                           {item}
                         </li>
                       ))}
@@ -235,7 +247,7 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                 />
               </div>
               <div className="flex-1 p-8 lg:p-12">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-accent-blue-700 mb-4">
                   Robotics & Automation Systems
                 </h3>
                 <p className="text-lg text-gray-700 mb-6">
@@ -244,11 +256,11 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Services:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Services:</h4>
                     <ul className="space-y-1">
                       {['Robotic welding cells', 'Pick-and-place systems', 'Material handling automation', 'Custom robotic workstations'].map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-gray-900 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-accent-blue-700 rounded-full"></div>
                           {item}
                         </li>
                       ))}
@@ -256,11 +268,11 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Benefits:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
                       {['Reduces human error', 'Increases output & consistency', 'Enhances workplace safety', 'Supports digital transformation & Industry 4.0'].map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-gray-900 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-accent-blue-700 rounded-full"></div>
                           {item}
                         </li>
                       ))}
@@ -281,7 +293,7 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                 />
               </div>
               <div className="flex-1 p-8 lg:p-12">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-accent-blue-700 mb-4">
                   End-to-End Engineering Services
                 </h3>
                 <p className="text-lg text-gray-700 mb-6">
@@ -290,11 +302,11 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Activities:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Activities:</h4>
                     <ul className="space-y-1">
                       {['CAD/CAM design', 'CAE & simulations', 'Reverse engineering', 'Product development', 'Simulation analysis', 'Rapid prototyping', 'PPAP compliance'].map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-gray-900 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-accent-blue-700 rounded-full"></div>
                           {item}
                         </li>
                       ))}
@@ -302,7 +314,7 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Goal:</h4>
+                    <h4 className="font-bold text-accent-blue-700 mb-2">Goal:</h4>
                     <p className="text-gray-700">Transform concepts into manufacturable, high-performance solutions</p>
                   </div>
                 </div>
@@ -315,8 +327,8 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
       <RevealOnScroll delay={500}>
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Industries Served</h2>
+            <div className="text-left mb-12">
+              <h2 className="text-3xl font-bold text-accent-blue-700 mb-4">Industries Served</h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Tailored engineering for diverse mobility and industrial sectors.
               </p>
@@ -327,8 +339,8 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                 const Icon = industry.icon;
                 return (
                   <div key={index} className="text-center p-4 bg-white rounded-sm shadow-sm">
-                    <Icon size={28} className="mx-auto mb-3 text-gray-600" />
-                    <h3 className="text-sm font-semibold text-gray-900">
+                    <Icon size={28} className="mx-auto mb-3 text-accent-blue-500" />
+                    <h3 className="text-sm font-semibold text-accent-blue-500">
                       {industry.title}
                     </h3>
                   </div>
@@ -337,11 +349,11 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
             </div>
 
             <div className="bg-white p-8 rounded-sm shadow-md max-w-4xl mx-auto">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Adaptability:</h3>
+              <h3 className="text-xl font-bold text-accent-blue-700 mb-4">Adaptability:</h3>
               <ul className="space-y-2">
                 {['Tailored for durability', 'Precision tolerance requirements', 'Sector-specific volume needs'].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-gray-700">
-                    <div className="w-2 h-2 bg-gray-900 rounded-full flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-blue-700 rounded-full flex-shrink-0"></div>
                     <span className="font-medium">{item}</span>
                   </li>
                 ))}
@@ -354,8 +366,8 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
       <RevealOnScroll delay={600}>
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Core Strengths & Differentiators</h2>
+            <div className="text-left mb-12">
+              <h2 className="text-3xl font-bold text-accent-blue-700 mb-8">Core Strengths & Differentiators</h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -363,8 +375,8 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
                 const Icon = strength.icon;
                 return (
                   <div key={index} className="text-center p-6 bg-gray-50 rounded-sm">
-                    <Icon size={36} className="mx-auto mb-4 text-gray-700" />
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <Icon size={36} className="mx-auto mb-4 text-accent-blue-500" />
+                    <h3 className="text-xl font-bold text-accent-blue-500 mb-3">
                       {strength.title}
                     </h3>
                     <p className="text-gray-700 text-sm leading-relaxed">
@@ -387,7 +399,7 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
       <RevealOnScroll delay={700}>
         <section className="py-20 bg-gradient-to-r from-accent-blue-600 to-accent-blue-800 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold mb-8">Ready to build with precision?</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-8">Ready to build with precision?</h2>
             <button
               onClick={() => onNavigate('home')}
               className="inline-flex items-center gap-2 bg-white text-accent-blue-600 px-8 py-4 rounded-sm font-semibold hover:bg-accent-blue-50 transition-all shadow-md hover:shadow-lg"

@@ -35,10 +35,10 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
           <div>
-            <h3 className="text-4xl font-bold text-left text-gray-900 mb-4">
+            <h3 className="text-2xl md:text-4xl font-bold text-left text-accent-blue-700 mb-4">
               Why Choose Us?
             </h3>
-            <p className="text-xl text-gray-700 max-w-3xl text-left italic mb-12">
+            <p className="text-basw md:text-xl text-gtay-700 max-w-3xl text-left italic mb-12">
               Excellence in every detail, commitment in every promise.
             </p>
 
@@ -50,8 +50,8 @@ export default function WhyChooseUs() {
                     key={index}
                     className="text-center p-4"
                   >
-                    <Icon size={48} className="mx-auto mb-4 text-gray-600" />
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">
+                    <Icon size={48} className="mx-auto mb-4 text-accent-blue-500" />
+                    <h4 className="text-xl font-bold text-accent-blue-500 mb-2">
                       {item.title}
                     </h4>
                     <p className="text-gray-700 leading-relaxed text-sm">

@@ -11,7 +11,7 @@ export default function Welcome({ onNavigate }: WelcomeProps) {
         <RevealOnScroll>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-2xl md:text-5xl font-bold text-gray-800 mb-4">
+              <h2 className="text-2xl md:text-5xl font-bold text-accent-blue-700 mb-4">
                 Next-Gen Automotive Manufacturing 
               </h2>
               <p className="text-base italic md:text-2xl text-accent-blue-500 font-semibold mb-8">
@@ -25,7 +25,7 @@ export default function Welcome({ onNavigate }: WelcomeProps) {
               </p>
               <button 
                 onClick={() => onNavigate('aboutUs')}
-                className="inline-flex items-center gap-2 bg-white text-accent-blue-500 px-4 md:px-8 py-2 md:py-4 rounded-sm font-normal border-2 border-accent-blue-500 hover:bg-accent-blue-500 hover:text-white transition-all shadow-md hover:shadow-lg"
+                className="inline-flex items-center gap-2 bg-white text-accent-blue-500 px-4 md:px-8 py-2 md:py-4 rounded-sm font-normal md:font-semibold border-2 border-accent-blue-500 hover:bg-accent-blue-500 hover:text-white transition-all shadow-md hover:shadow-lg"
               >
                 Know more about us
                 <span className="text-xl">→</span>

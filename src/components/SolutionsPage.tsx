@@ -1,4 +1,5 @@
 import { Settings, Wrench, Grid3x3, Bot, Cpu, Cog } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import RevealOnScroll from './RevealOnScroll';
 
 interface SolutionsPageProps {
@@ -95,9 +96,20 @@ const services = [
 export default function SolutionsPage({ onNavigate }: SolutionsPageProps) {
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-        <h1 className="text-5xl font-bold mb-6 text-gray-900">Our Solutions</h1>
-        <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+      {/* Back Arrow */}
+      <div className="fixed top-24 left-4 z-50">
+        <button
+          onClick={() => onNavigate('home')}
+          className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:bg-accent-blue-50 border border-gray-200"
+          aria-label="Back to home"
+        >
+          <ArrowLeft size={24} className="text-accent-blue-700" />
+        </button>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-left">
+        <h1 className="text-3xl md:text-5xl font-bold mb-6 text-accent-blue-700">Our Solutions</h1>
+        <p className="text-base md:text-xl text-gray-700 max-w-3xl mx-auto">
           Comprehensive engineering and manufacturing solutions tailored for the automotive and industrial sectors
         </p>
       </div>
@@ -105,8 +117,8 @@ export default function SolutionsPage({ onNavigate }: SolutionsPageProps) {
       <section id="products-section" className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-left mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Products</h2>
-            <p className="text-lg text-gray-700">
+            <h2 className="text-2xl md:text-4xl font-bold text-accent-blue-700 mb-4">Our Products</h2>
+            <p className="text-base md:text-lg text-gray-700">
               High-quality automotive components and engineering solutions for diverse industrial applications
             </p>
           </div>
@@ -126,7 +138,7 @@ export default function SolutionsPage({ onNavigate }: SolutionsPageProps) {
                     </div>
                     <div className="flex-1 p-8">
                       <div className="flex items-center gap-4 mb-4">
-                        <h3 className="text-2xl font-bold text-gray-900">
+                        <h3 className="text-2xl font-bold text-accent-blue-700">
                           {product.title}
                         </h3>
                       </div>
@@ -138,7 +150,7 @@ export default function SolutionsPage({ onNavigate }: SolutionsPageProps) {
                       <div className="space-y-2">
                         {product.items.map((item, itemIndex) => (
                           <div key={itemIndex} className="flex items-center gap-3">
-                            <div className="w-2 h-2 bg-gray-900 rounded-full flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-accent-blue-700 rounded-full flex-shrink-0"></div>
                             <span className="text-gray-700 font-medium">{item}</span>
                           </div>
                         ))}
@@ -154,9 +166,9 @@ export default function SolutionsPage({ onNavigate }: SolutionsPageProps) {
 
       <section id="services-section" className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <div className="text-left mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-accent-blue-700 mb-4">Our Services</h2>
+            <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
               End-to-end engineering and manufacturing support for your entire production lifecycle
             </p>
           </div>
@@ -167,8 +179,8 @@ export default function SolutionsPage({ onNavigate }: SolutionsPageProps) {
               return (
                 <RevealOnScroll key={index} delay={index * 100}>
                   <div className="text-center p-6 bg-white rounded-sm shadow-md hover:shadow-lg transition-all duration-300">
-                    <Icon size={36} className="mx-auto mb-4 text-gray-600" />
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <Icon size={36} className="mx-auto mb-4 text-accent-blue-500" />
+                    <h3 className="text-xl font-bold text-accent-blue-500 mb-3">
                       {service.title}
                     </h3>
                     <p className="text-gray-700 leading-relaxed text-sm">
@@ -185,8 +197,8 @@ export default function SolutionsPage({ onNavigate }: SolutionsPageProps) {
       <RevealOnScroll delay={600}>
         <section className="py-12 bg-gradient-to-r from-accent-blue-600 to-accent-blue-800 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold mb-8">Ready to Get Started?</h2>
-            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-8">
+            <h2 className="text-2xl md:text-4xl font-bold mb-8">Ready to Get Started?</h2>
+            <p className="text-base md:text-xl leading-relaxed max-w-3xl mx-auto mb-8">
               Let us help you bring your engineering and manufacturing projects to life with our comprehensive solutions and expertise.
             </p>
             <button

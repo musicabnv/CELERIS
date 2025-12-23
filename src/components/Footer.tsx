@@ -19,6 +19,13 @@ export default function Footer({ onContactClick, onNavigate }: FooterProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
+            <div className="mb-8">
+              <img 
+                src="https://res.cloudinary.com/doalvffjs/image/upload/v1765883863/Celeris_AutoComp_20251214_221328_0000-removebg-preview_vocxg4.png" 
+                alt="Celeris Autocomp Logo" 
+                className="h-12 md:h-16"
+              />
+            </div>
             <h3 className="text-xl font-bold mb-6">Contact</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">

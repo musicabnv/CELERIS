@@ -95,7 +95,7 @@ export default function Hero({ onContactClick, onNavigate }: HeroProps) {
               Manufacturing Automotive <span className="text-white">Systems</span>
             </h2>
             <h2 className="text-4xl md:text-5xl font-semibold leading-tight mt-2">
-              Built For <span className="text-blue-500">Production</span>
+              Built For <span className="text-blue-500">World Class Production</span>
             </h2>
             <p className="text-base md:text-lg max-w-2xl mt-6 mb-4 text-gray-200 leading-relaxed">
               Precision components, tooling, and automation for automotive programs.
