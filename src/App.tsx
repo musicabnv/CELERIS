@@ -50,15 +50,24 @@ function App() {
         </div>
       ) : currentPage === 'aboutUs' ? (
         <div key="aboutUs" className="animate-pageTransition">
-          <AboutUsPage onNavigate={handleNavigate} />
+          <AboutUsPage 
+            onNavigate={handleNavigate} 
+            onContactClick={() => setIsContactModalOpen(true)}
+          />
         </div>
       ) : currentPage === 'solutions' ? (
         <div key="solutions" className="animate-pageTransition">
-          <SolutionsPage onNavigate={handleNavigate} />
+          <SolutionsPage 
+            onNavigate={handleNavigate}
+            onContactClick={() => setIsContactModalOpen(true)}
+          />
         </div>
       ) : (
         <div key="capabilities" className="animate-pageTransition">
-          <CapabilitiesPage onNavigate={handleNavigate} />
+          <CapabilitiesPage 
+            onNavigate={handleNavigate}
+            onContactClick={() => setIsContactModalOpen(true)}
+          />
         </div>
       )}
       <ContactModal
