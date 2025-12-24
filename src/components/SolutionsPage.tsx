@@ -4,6 +4,7 @@ import RevealOnScroll from './RevealOnScroll';
 
 interface SolutionsPageProps {
   onNavigate: (page: 'home' | 'aboutUs' | 'solutions' | 'products' | 'services' | 'capabilities') => void;
+  onContactClick?: () => void;
 }
 
 const products = [
@@ -93,7 +94,7 @@ const services = [
   }
 ];
 
-export default function SolutionsPage({ onNavigate }: SolutionsPageProps) {
+export default function SolutionsPage({ onNavigate, onContactClick }: SolutionsPageProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Back Arrow */}
@@ -202,7 +203,7 @@ export default function SolutionsPage({ onNavigate }: SolutionsPageProps) {
               Let us help you bring your engineering and manufacturing projects to life with our comprehensive solutions and expertise.
             </p>
             <button
-              onClick={() => onNavigate('home')}
+              onClick={onContactClick}
               className="inline-flex items-center gap-2 bg-white text-accent-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-accent-blue-50 transition-all shadow-md hover:shadow-lg"
             >
               Get in Touch

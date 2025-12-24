@@ -31,7 +31,8 @@ export default function Footer({ onContactClick, onNavigate }: FooterProps) {
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="text-accent-blue-300 mt-1 flex-shrink-0" />
                 <p className="text-gray-300">
-                  Head Office: Nanekarwadi, Chakan, Pune - 410501, Maharashtra, India
+                  Head Office: 
+                  <br/>Nanekarwadi, Chakan, Pune - 410501, Maharashtra, India
                 </p>
               </div>
               <div className="flex items-center gap-3">
@@ -83,7 +84,8 @@ export default function Footer({ onContactClick, onNavigate }: FooterProps) {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {currentYear} CELERIS AUTOCOMP. All rights reserved.</p>
+          <p>CELERIS AUTOCOMP PVT LTD. 
+          <br/>  &copy; {currentYear} All rights reserved.</p>
         </div>
       </div>
     </footer>

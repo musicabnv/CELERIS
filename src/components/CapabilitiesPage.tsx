@@ -4,6 +4,7 @@ import RevealOnScroll from './RevealOnScroll';
 
 interface CapabilitiesPageProps {
   onNavigate: (page: 'home' | 'aboutUs' | 'solutions' | 'products' | 'services' | 'capabilities') => void;
+  onContactClick?: () => void;
 }
 
 const capabilitiesGlance = [
@@ -46,7 +47,7 @@ const strengths = [
   }
 ];
 
-export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) {
+export default function CapabilitiesPage({ onNavigate, onContactClick }: CapabilitiesPageProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Back Arrow */}
@@ -401,7 +402,7 @@ export default function CapabilitiesPage({ onNavigate }: CapabilitiesPageProps) 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl md:text-4xl font-bold mb-8">Ready to build with precision?</h2>
             <button
-              onClick={() => onNavigate('home')}
+              onClick={onContactClick}
               className="inline-flex items-center gap-2 bg-white text-accent-blue-600 px-8 py-4 rounded-sm font-semibold hover:bg-accent-blue-50 transition-all shadow-md hover:shadow-lg"
             >
               Get in Touch

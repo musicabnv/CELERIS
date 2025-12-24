@@ -3,9 +3,10 @@ import RevealOnScroll from './RevealOnScroll';
 
 interface AboutUsPageProps {
   onNavigate: (page: 'home' | 'aboutUs' | 'services' | 'products') => void;
+  onContactClick?: () => void;
 }
 
-export default function AboutUsPage({ onNavigate }: AboutUsPageProps) {
+export default function AboutUsPage({ onNavigate, onContactClick }: AboutUsPageProps) {
   const mission = {
     title: 'Our Mission',
     description: 'To deliver world-class automotive and industrial engineering solutions by combining precision manufacturing, cutting-edge technology, and reliable craftsmanship.',
@@ -285,10 +286,10 @@ export default function AboutUsPage({ onNavigate }: AboutUsPageProps) {
               At Celeris Autocomp, we combine cutting-edge technology with a commitment to precision, delivering solutions that help our customers build the vehicles and machines of tomorrow.
             </p>
             <button
-              onClick={() => onNavigate('home')}
+              onClick={() => onNavigate('solutions')}
               className="inline-flex items-center gap-2 bg-white text-accent-blue-600 px-8 py-4 rounded-sm font-semibold hover:bg-accent-blue-50 transition-all shadow-md hover:shadow-lg"
             >
-              Explore Our Services
+              Explore Our Solutions
               <span className="text-xl">→</span>
             </button>
           </div>
