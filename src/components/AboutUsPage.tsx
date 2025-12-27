@@ -70,7 +70,7 @@ export default function AboutUsPage({ onNavigate, onContactClick }: AboutUsPageP
       {/* Page Title */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-left">
         <h1 className="text-3xl md:text-5xl font-bold mb-4 text-blue-700">About <span className="italic"> Celeris</span> </h1>
-        <p className="text-base md:text-xl text-gray-700 max-w-3xl italic mx-auto">
+        <p className="text-base md:text-xl text-gray-700 max-w-3xl italic">
           Engineering excellence through precision manufacturing and innovation
         </p>
       </div>
