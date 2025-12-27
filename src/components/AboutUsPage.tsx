@@ -11,7 +11,7 @@ export default function AboutUsPage({ onNavigate, onContactClick }: AboutUsPageP
     title: 'Our Mission',
     description: 'To deliver world-class automotive and industrial engineering solutions by combining precision manufacturing, cutting-edge technology, and reliable craftsmanship.',
     icon: Target,
-    image: 'https://images.pexels.com/photos/2166/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&w=1200'
+    image: 'https://res.cloudinary.com/doalvffjs/image/upload/v1766825389/1766825044273_lr26q4.webp'
   };
 
   const vision = {
