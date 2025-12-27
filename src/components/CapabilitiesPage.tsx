@@ -63,7 +63,7 @@ export default function CapabilitiesPage({ onNavigate, onContactClick }: Capabil
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-left">
         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-accent-blue-700">Our Capabilities</h1>
-        <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-700 max-w-3xl">
           Delivering advanced engineering and manufacturing excellence across the entire product lifecycle.
         </p>
       </div>
