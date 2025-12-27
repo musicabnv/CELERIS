@@ -110,7 +110,7 @@ export default function SolutionsPage({ onNavigate, onContactClick }: SolutionsP
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-left">
         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-accent-blue-700">Our Solutions</h1>
-        <p className="text-base md:text-xl text-gray-700 max-w-3xl mx-auto">
+        <p className="text-base md:text-xl text-gray-700 max-w-3xl">
           Comprehensive engineering and manufacturing solutions tailored for the automotive and industrial sectors
         </p>
       </div>
