@@ -47,7 +47,7 @@ export default function Header({ onContactClick, onNavigate }: HeaderProps) {
         <div className="flex items-center h-20">
           <div className="flex-shrink-0 -ml-1 md:-ml-2">
             <img 
-              src="https://res.cloudinary.com/doalvffjs/image/upload/v1765883863/Celeris_AutoComp_20251214_221328_0000-removebg-preview_vocxg4.png" 
+              src="https://res.cloudinary.com/doalvffjs/image/upload/v1766825830/1000102709-removebg-preview_ytzxe3.png" 
               alt="Celeris Autocomp Logo" 
               className="h-11 md:h-14"
             />
