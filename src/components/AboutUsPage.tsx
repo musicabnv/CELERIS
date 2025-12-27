@@ -18,7 +18,7 @@ export default function AboutUsPage({ onNavigate, onContactClick }: AboutUsPageP
     title: 'Our Vision',
     description: 'To become a globally trusted engineering and manufacturing partner, recognized for innovation, quality, and customer-centric solutions across the automotive and heavy engineering ecosystem.',
     icon: Eye,
-    image: 'https://images.pexels.com/photos/355952/pexels-photo-355952.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    image: 'https://res.cloudinary.com/doalvffjs/image/upload/v1766825389/1766765833644_lvdqqj.webp'
   };
 
   const coreValues = [
